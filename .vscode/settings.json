@@ -1,0 +1,14 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "editor.formatOnSave": true,
+    "jdk.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "python.defaultInterpreterPath": "c:/Users/Homero/projetos/sistema_pedidos/venv/Scripts/python.exe",
+    "python.analysis.extraPaths": [
+        "c:/Users/Homero/projetos/sistema_pedidos"
+    ],
+    "python.languageServer": "Pylance",
+    "security.workspace.trust.enabled": false
+}
