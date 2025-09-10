@@ -1,0 +1,140 @@
+company,tender,code,description,kind,unit,qty_awarded,unit_price,total_price
+lumar,tender_enf,014.001.004,AGULHA 13/4.5 CX 100,Itens de Enfermagem,CX,300,6.83,2049.00
+lumar,tender_enf,014.001.005,AGULHA 25/7 CX 100,Itens de Enfermagem,CX,200,6.83,1366.00
+lumar,tender_enf,014.001.007,AGULHA 30/7 100 CX,Itens de Enfermagem,CX,500,6.83,3415.00
+lumar,tender_enf,014.001.008,AGULHA 30/8 100 CX,Itens de Enfermagem,CX,500,6.83,3415.00
+lumar,tender_enf,014.001.009,AGULHA 40/12 CX 100,Itens de Enfermagem,CX,500,7.799,3899.50
+lumar,tender_enf,014.001.010,ALCOOL 70% 1L,Itens de Enfermagem,LT,1000,5.40,5400.00
+lumar,tender_enf,014.001.076,ALGODÃO 500 G,Itens de Enfermagem,ROLO,500,13.40,6700.00
+lumar,tender_enf,014.001.011,ALMOTOLIA COR ÂMBAR 125 ML,Itens de Enfermagem,UNI,100,2.50,250.00
+lumar,tender_enf,014.001.012,ALMOTOLIA TRANSPARENTE 125 ML,Itens de Enfermagem,UNI,100,2.50,250.00
+lumar,tender_enf,014.000.502,APARELHO DE PRESSÃO P/OBESO,Itens de Enfermagem,UN,10,77.98,779.80
+lumar,tender_enf,013.000.729,BORRIFADOR 500 ML,Itens de Enfermagem,UNI,1000,6.50,6500.00
+lumar,tender_enf,023.001.002,CABO DE BISTURI Nº 4,Itens de Enfermagem,UNI,10,7.70,77.00
+lumar,tender_enf,023.001.004,CATÉTER NASAL TIPO ÓCULOS (ADULTO),Itens de Enfermagem,UNI,1000,0.87,870.00
+lumar,tender_enf,023.001.032,CATÉTER PERIFÉRICO I.V Nº 18,Itens de Enfermagem,UNI,100,0.79,79.00
+lumar,tender_enf,014.001.021,CATETER PERIFÉRICO I.V 24,Itens de Enfermagem,UNI,3000,0.94,2820.00
+lumar,tender_enf,014.001.023,COLETOR DE URINA E SECREÇÃO TIPO SACO- 2 LITROS C/BARBANTE,Itens de Enfermagem,UNI,5000,0.33,1650.00
+lumar,tender_enf,014.001.086,COMPRESSA DE GAZE 7.5 CM/7.5 CM FECHADA 13 FIOS (ESTÉRIL) PCT C/ 10 UNI,Itens de Enfermagem,PCT,100000,0.55,55000.00
+lumar,tender_enf,023.001.036,CONJUNTO DE NEBULIZAÇÃO/OXIGÊNIO/ADULTO,Itens de Enfermagem,UNI,100,5.75,575.00
+lumar,tender_enf,023.001.037,CONJUNTO DE NEBULIZAÇÃO/OXIGÊNIO/INFANTIL,Itens de Enfermagem,UNI,70,5.75,402.50
+lumar,tender_enf,014.001.174,ELETRODO P/ECG,Itens de Enfermagem,UN,200,0.22,44.00
+lumar,tender_enf,014.001.029,ESCOVAS CERVICAL GINECOLÓGICA PACOTES COM 100 UNIDADES,Itens de Enfermagem,PCT,30,24.00,720.00
+lumar,tender_enf,014.000.521,"ESPARADRAPO 10 CM X 4,5 M",Itens de Enfermagem,UN,1000,8.80,8800.00
+lumar,tender_enf,014.000.055,FIO DE NYLON 4.0,Itens de Enfermagem,CX,10,27.99,279.90
+lumar,tender_enf,014.001.037,FIO DE NYLON 2.0,Itens de Enfermagem,CX,50,28.60,1430.00
+lumar,tender_enf,014.001.038,FIO DE NYLON 3.0,Itens de Enfermagem,CX,50,28.60,1430.00
+lumar,tender_enf,014.000.527,GARROTE P/ COLETAS DE SANGUE,Itens de Enfermagem,UN,100,6.42,642.00
+lumar,tender_enf,023.001.007,GEL P/ECG FRASCO 100 ML,Itens de Enfermagem,FRC,50,1.54,77.00
+lumar,tender_enf,014.000.231,GORRO,Itens de Enfermagem,UNI,10000,0.06,600.00
+lumar,tender_enf,014.001.046,LÂMINA DE BISTURI Nº11,Itens de Enfermagem,CX,20,23.40,468.00
+lumar,tender_enf,014.001.047,LÂMINA DE BISTURI Nº21 CAIXA COM 100,Itens de Enfermagem,CX,20,23.40,468.00
+lumar,tender_enf,013.013.100,LANTERNA CLÍNICA,Itens de Enfermagem,UN,10,16.90,169.00
+lumar,tender_enf,014.001.050,LUVA CIRÚRGICA 7.5,Itens de Enfermagem,PAR,2000,1.36,2720.00
+lumar,tender_enf,014.001.051,LUVAS DE PROCEDIMENTOS (G) CAIXAS COM 100,Itens de Enfermagem,CX,300,22.90,6870.00
+lumar,tender_enf,014.001.052,LUVAS DE PROCEDIMENTOS (M) CAIXA COM 100,Itens de Enfermagem,CX,600,22.90,13740.00
+lumar,tender_enf,014.001.053,LUVAS DE PROCEDIMENTOS (P) CAIXA COM 100,Itens de Enfermagem,CX,600,22.90,13740.00
+lumar,tender_enf,014.000.086,MÁSCARA N 95,Itens de Enfermagem,UN,1000,0.65,650.00
+lumar,tender_enf,014.002.073,ÓLEO DE GIRASSOL 100ML,Itens de Enfermagem,FR,1000,2.85,2850.00
+lumar,tender_enf,014.001.071,SCALPS N 23,Itens de Enfermagem,UN,15000,"0,22",3300.00
+lumar,tender_enf,023.001.015,SERINGAS DESC. 1 ML C/AG ULTRAFINE,Itens de Enfermagem,UNI,15000,0.20,3000.00
+lumar,tender_enf,014.001.058,SERINGAS DESC. 3 ML S/AG,Itens de Enfermagem,UNI,10000,0.11,1100.00
+lumar,tender_enf,014.001.059,SERINGAS DESC. 5 ML S/AG,Itens de Enfermagem,UNI,15000,0.14,2100.00
+lumar,tender_enf,014.001.060,SERINGAS DESC. 10 ML S/AG,Itens de Enfermagem,UNI,15000,0.21,3150.00
+lumar,tender_enf,014.001.062,SOLUÇÃO DE HIPOCLORITO DE SÓDIO 1% P/P,Itens de Enfermagem,UNI,40,10.98,439.20
+lumar,tender_enf,014.001.063,SONDA DE FAWLEY Nº 14,Itens de Enfermagem,UNI,20,2.50,50.00
+lumar,tender_enf,014.001.064,SONDA DE FAWLEY Nº 16,Itens de Enfermagem,UNI,80,2.45,196.00
+lumar,tender_enf,014.001.065,SONDA DE FAWLEY Nº 18,Itens de Enfermagem,UNI,30,2.36,70.80
+lumar,tender_enf,014.001.066,SONDA DE FAWLEY Nº 20,Itens de Enfermagem,UNI,30,2.36,70.80
+lumar,tender_enf,014.001.091,SONDA DE FAWLEY Nº 22,Itens de Enfermagem,UNI,20,2.50,50.00
+lumar,tender_enf,014.000.551,TESOURA DE ÍRIS 12 CM,Itens de Enfermagem,UN,2,18.00,36.00
+lumar,tender_enf,014.000.555,TESTE DE GRAVIDEZ EM TIRA C/FRASCO COLETOR,Itens de Enfermagem,UN,1000,1.81,1810.00
+cirurgica_uniao,tender_enf,014.000.034,ABAIXADOR DE LINGUA,Itens de Enfermagem,PCT,100,4.999,499.90
+cirurgica_uniao,tender_enf,006.001.030,ÁGUA OXIGENADA 10 VOL.,Itens de Enfermagem,LT,50,4.50,225.00
+cirurgica_uniao,tender_enf,014.001.006,AGULHA 25/8 CX 100,Itens de Enfermagem,CX,500,7.39,3695.00
+cirurgica_uniao,tender_enf,023.001.025,AVENTAL GRAMATURA 40 MANGA LONGA,Itens de Enfermagem,UNI,10000,2.15,21500.00
+cirurgica_uniao,tender_enf,014.001.019,BANDAGEM ANTISSÉPTICA CAIXA COM 500 UNIDADES,Itens de Enfermagem,UNI,100,10.30,1030.00
+cirurgica_uniao,tender_enf,014.002.037,"BANDEJA INOX LISA 22 X 17 X 1,5 CM",Itens de Enfermagem,UNI,20,33.50,670.00
+cirurgica_uniao,tender_enf,014.000.505,CAMISOLAS DE PACIENTES P/EXAMES,Itens de Enfermagem,UN,500,1.49,745.00
+cirurgica_uniao,tender_enf,014.001.162,CAMPO CIRÚRGICO 1 MT X 1MT FENESTRADO SM,Itens de Enfermagem,UN,500,3.82,1910.00
+cirurgica_uniao,tender_enf,023.001.033,CATÉTER PERIFÉRICO I.V Nº 20,Itens de Enfermagem,UNI,3000,0.859,2577.00
+cirurgica_uniao,tender_enf,023.001.034,CATÉTER PERIFÉRICO I.V Nº 22,Itens de Enfermagem,UNI,3000,0.859,2577.00
+cirurgica_uniao,tender_enf,014.000.506,CINTO DE SEGURANÇA P/AMBULÂNCIA,Itens de Enfermagem,UN,20,355.76,7115.20
+cirurgica_uniao,tender_enf,014.001.022,COLETOR DE MATERIAL PERFURO CORTANTE 13 L,Itens de Enfermagem,UNI,500,4.93,2465.00
+cirurgica_uniao,tender_enf,023.001.035,COMADRE DE INOX 40X30 CM,Itens de Enfermagem,UNI,5,192.10,960.50
+cirurgica_uniao,tender_enf,014.000.512,COMPRESSA P/CURATIVOS CIRÚRGICO ESTÉRIL,Itens de Enfermagem,UN,1000,0.90,900.00
+cirurgica_uniao,tender_enf,014.002.039,CUBA RIM INOX 26 X 12 X 6 CM,Itens de Enfermagem,UN,10,37.00,370.00
+cirurgica_uniao,tender_enf,014.001.032,ESPÉCULO VAGINAL DESCARTÁVEL (G),Itens de Enfermagem,UNI,1000,1.40,1400.00
+cirurgica_uniao,tender_enf,014.001.033,ESPÉCULOS VAGINAL DESCARTÁVEL (M),Itens de Enfermagem,UNI,1000,1.19,1190.00
+cirurgica_uniao,tender_enf,014.001.034,ESPÉCULOS VAGINAL DESCARTÁVEL (P),Itens de Enfermagem,UNI,1000,1.13,1130.00
+cirurgica_uniao,tender_enf,014.000.523,FITA ADESIVA 16MM X 50M,Itens de Enfermagem,UN,500,3.20,1600.00
+cirurgica_uniao,tender_enf,014.000.524,FITA DE AUTOCLAVE 19MM X 30M,Itens de Enfermagem,RL,200,3.72,744.00
+cirurgica_uniao,tender_enf,014.000.525,FITA DE MICROPORE 25MM X 4.5M,Itens de Enfermagem,RL,5000,1.969,9845.00
+cirurgica_uniao,tender_enf,014.000.526,FITA DE MICROPORE 50MM X 10M,Itens de Enfermagem,UN,200,4.30,860.00
+cirurgica_uniao,tender_enf,023.001.040,FITA P/CERTIFICAÇÃO DE GLICEMIA CAPILAR C/ 50 UNI,Itens de Enfermagem,UN,150000,0.47,70500.00
+cirurgica_uniao,tender_enf,014.001.043,FRASCO P/ALIMENTAÇÃO 300ML,Itens de Enfermagem,UNI,5000,0.729,3645.00
+cirurgica_uniao,tender_enf,023.001.006,GEL P/DETECTOR FETAL FRASCO 100ML,Itens de Enfermagem,FRC,100,1.68,168.00
+cirurgica_uniao,tender_enf,014.001.048,LANCETAS C/ DISPOSITIVO,Itens de Enfermagem,UNI,30000,0.11,3300.00
+cirurgica_uniao,tender_enf,013.007.523,LIXEIRA DE PEDAL 100 LITROS,Itens de Enfermagem,UN,50,220.90,11045.00
+cirurgica_uniao,tender_enf,003.000.228,LIXEIRA DE PEDAL 30 LITROS,Itens de Enfermagem,UN,50,67.76,3388.00
+cirurgica_uniao,tender_enf,023.001.008,MÁSCARA CIRÚRGICA TRIPLA C/ELÁSTICO CAIXA,Itens de Enfermagem,CX,50000,0.092,4600.00
+cirurgica_uniao,tender_enf,014.000.532,MÁSCARA DE ALTA CONCENTRAÇÃO OXIGÊNIO,Itens de Enfermagem,UN,1000,5.88,5880.00
+cirurgica_uniao,tender_enf,014.000.534,MÁSCARA FACIAL PARA NEBULIZAÇÃO CONTÍNUA,Itens de Enfermagem,UN,30,6.38,191.40
+cirurgica_uniao,tender_enf,014.001.054,PAPEL CREPADO 40CM/40 CAIXA COM 500,Itens de Enfermagem,CX,2,128.50,257.00
+cirurgica_uniao,tender_enf,014.001.090,PAPEL GRAU CIRÚRGICO 25/100,Itens de Enfermagem,BO,10,119.04,1190.40
+cirurgica_uniao,tender_enf,014.000.359,PINÇA CHERON 24 CM EM AÇO INOX.,Itens de Enfermagem,UNI,4,48.00,192.00
+cirurgica_uniao,tender_enf,023.001.013,PINÇA KELLY RETA,Itens de Enfermagem,UNI,10,29.70,297.00
+cirurgica_uniao,tender_enf,014.000.087,POLIFIX ADULTO,Itens de Enfermagem,UN,100,0.63,63.00
+cirurgica_uniao,tender_enf,014.001.061,SERINGAS DESC. 20 ML S/AG,Itens de Enfermagem,UNI,15000,0.33,4950.00
+cirurgica_uniao,tender_enf,014.002.019,SONDA DE ASPIRAÇÃO TRAQUEAL Nº 12,Itens de Enfermagem,UN,10000,0.52,5200.00
+cirurgica_uniao,tender_enf,014.001.068,SONDA URETRAL Nº 12,Itens de Enfermagem,UNI,15000,0.50,7500.00
+cirurgica_uniao,tender_enf,014.000.547,SUPORTE P/ MATERIAIS PERFURO CORTANTE P/1,Itens de Enfermagem,UN,10,21.00,210.00
+cirurgica_uniao,tender_enf,006.000.295,TERMOMETRO DIGITAL,Itens de Enfermagem,UN,100,9.999,999.90
+cirurgica_uniao,tender_enf,014.002.052,VASELINA LIQUIDA,Itens de Enfermagem,L,10,29.80,298.00
+placido,tender_enf,014.000.500,ABAIXADOR DE LÍNGUA COLORIDO AROMADO LIS,Itens de Enfermagem,UN,100,37.998,3799.80
+placido,tender_enf,014.001.015,ATADURA DE CREPE 10 CM 13 FIOS PACOTES COM,Itens de Enfermagem,PCT,1000,4.80,4800.00
+placido,tender_enf,014.001.016,ATADURA DE CREPE 15 CM 13 FIOS PACOTES COM,Itens de Enfermagem,PCT,1000,7.10,7100.00
+placido,tender_enf,014.001.017,ATADURA DE CREPE 20 CM 13 FIOS PACOTES COM,Itens de Enfermagem,PCT,1000,9.689,9689.00
+placido,tender_enf,014.001.018,ATADURA DE CREPE 6 CM 13 FIOS PACOTES COM,Itens de Enfermagem,PCT,1000,2.98,2980.00
+placido,tender_enf,014.000.511,COLETOR DE URINA INFANTIL UNISSEX ESTÉRIL 100 ML,Itens de Enfermagem,UN,3000,0.35,1050.00
+placido,tender_enf,023.001.038,ESCADA 2 DEGRAUS ANTIDERRAPANTE,Itens de Enfermagem,UN,12,121.999,1463.99
+placido,tender_enf,014.002.042,FIO GUIA P/ ENTUBAÇÃO ADULTO,Itens de Enfermagem,UN,5,11.00,55.00
+placido,tender_enf,014.000.078,LENÇOL DESCARTÁVEL PARA MACA,Itens de Enfermagem,UN,5000,0.88,4400.00
+placido,tender_enf,014.000.533,MANGUEIRA DE O2,Itens de Enfermagem,UN,100,4.50,450.00
+placido,tender_enf,014.005.088,PAPEL P/ECG 216 MM X 30MT,Itens de Enfermagem,UN,500,22.32,11160.00
+placido,tender_enf,014.001.055,PAPEL P/ECG 58/30,Itens de Enfermagem,RL,500,7.35,3675.00
+rosicler,tender_enf,014.001.077,APARELHO DE PRESSÃO (INFANTIL) COMPLETO,Itens de Enfermagem,UN,10,67.40,674.00
+rosicler,tender_enf,014.001.014,APARELHO DE PRESSÃO (ADULTO) COMPLETO,Itens de Enfermagem,UN,100,67.40,6740.00
+rosicler,tender_enf,023.001.003,CABO DE BISTURI Nº 5,Itens de Enfermagem,UN,10,11.00,110.00
+rosicler,tender_enf,014.000.517,CINTO DE SEGURANÇA P/MACA DE AMBULÂNCIA,Itens de Enfermagem,UN,20,21.50,430.00
+rosicler,tender_enf,014.000.200,COLAR CERVICAL FIBRA CIRÚRGICA (P),Itens de Enfermagem,UN,10,10.95,109.50
+rosicler,tender_enf,014.000.395,COLAR CERVICAL FIBRA CIRÚRGICA (G),Itens de Enfermagem,UN,10,10.95,109.50
+rosicler,tender_enf,014.000.509,COLAR CERVICAL FIBRA CIRÚRGICA (M),Itens de Enfermagem,UN,10,10.95,109.50
+rosicler,tender_enf,014.000.510,COLAR CERVICAL P/RESGATE (M),Itens de Enfermagem,UN,10,10.95,109.50
+rosicler,tender_enf,014.000.518,DEGERMANTE PVPI,Itens de Enfermagem,UN,50,44.80,2240.00
+rosicler,tender_enf,014.000.425,DETERGENTE ENZIMÁTICO GALÃO DE 5 LITROS,Itens de Enfermagem,UN,20,83.90,1678.00
+rosicler,tender_enf,014.000.035,ÉTER,Itens de Enfermagem,LT,100,38.70,3870.00
+rosicler,tender_enf,014.000.522,FIO GUIA P/ENTUBAÇÃO INFANTIL,Itens de Enfermagem,UN,5,12.00,60.00
+rosicler,tender_enf,014.000.536,OTOSCÓPIO INFANTIL,Itens de Enfermagem,UN,5,196.90,984.50
+rosicler,tender_enf,014.000.537,OTOSCÓPIO ADULTO,Itens de Enfermagem,UN,10,196.90,1969.00
+rosicler,tender_enf,014.000.538,PAPAGAIO INOX 1000 ML,Itens de Enfermagem,UN,5,111.90,559.50
+rosicler,tender_enf,023.001.011,PINÇA ANATÔMICA DENTE DE RATO,Itens de Enfermagem,UN,10,10.50,105.00
+rosicler,tender_enf,023.001.012,PINÇA KELLY CURVA,Itens de Enfermagem,UN,10,29.80,298.00
+rosicler,tender_enf,014.000.552,TESOURA DE MAYO 16 CM PONTA FINA,Itens de Enfermagem,UN,4,24.85,99.40
+rosicler,tender_enf,014.000.553,TESOURA DE MAYO 16 CM PONTA ROMBA,Itens de Enfermagem,UN,2,24.85,49.70
+rosicler,tender_enf,023.001.019,TESOURA DE MAYO Nº 12,Itens de Enfermagem,UN,20,28.00,560.00
+rosicler,tender_enf,014.000.554,TESOURA MULTIUSO PONTA REDONDA,Itens de Enfermagem,UN,20,32.00,640.00
+rosicler,tender_enf,014.001.070,TÓPICO PVPI,Itens de Enfermagem,LT,100,43.90,4390.00
+nossa_senhora,tender_enf,014.000.503,BOLSA COLETORA ESTÉRIL DE URINA - SISTEMA FECHADO,Itens de Enfermagem,UN,600,3.32,1992.00
+nossa_senhora,tender_enf,023.001.005,CATÉTER NASAL TIPO ÓCULOS (INFANTIL),Itens de Enfermagem,UNI,1000,1.16,1160.00
+nossa_senhora,tender_enf,014.001.031,ESPÁTULAS DE AYRES C/100,Itens de Enfermagem,PCT,20,10.61,212.20
+nossa_senhora,tender_enf,006.001.718,LÂMINA P/ MICROSCOPIA FOSCA,Itens de Enfermagem,UN,20,5.53,110.60
+nossa_senhora,tender_enf,014.000.447,MÁSCARA DE ALTA CONCENTRAÇÃO OXIGÊNIO C/ RESERVATÓRIO,Itens de Enfermagem,UN,1000,4.94,4940.00
+nossa_senhora,tender_enf,014.000.544,SACO BRANCO INFECTANTE 100 LITROS,Itens de Enfermagem,UN,5000,0.33,1650.00
+nossa_senhora,tender_enf,014.005.056,SACO BRANCO INFECTANTE 30 LITROS,Itens de Enfermagem,UN,5000,0.14,700.00
+dora,tender_enf,014.001.026,EQUIPO MACRO-GOTAS,Itens de Enfermagem,UNI,5000,0.909,4545.00
+dora,tender_enf,014.001.028,EQUIPO P/NUTRIÇÃO ENTERAL (AZUL),Itens de Enfermagem,UNI,5000,0.93,4650.00
+dora,tender_enf,014.001.035,ESTETOSCÓPIO (ADULTO),Itens de Enfermagem,UNI,100,10.88,1088.00
+lc_med,tender_enf,023.001.009,OXÍMETRO DE BOLSO,Itens de Enfermagem,UNI,100,31.42,3142.00
+lc_med,tender_enf,014.002.020,TERMÔMETRO DIGITAL LASER INFRAVERMELHO,Itens de Enfermagem,UN,200,45.71,9142.00
+easy,tender_enf,014.001.049,LENÇOL DE PAPEL DESCARTÁVEL 70CM/50M,Itens de Enfermagem,RL,6000,7.20,43200.00
