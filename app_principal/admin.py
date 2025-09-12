@@ -30,11 +30,18 @@ from . import admin_views
 from .storage.mega_cmd import enviar_para_mega
 
 
+import os
+
+
 def enviar_para_google_drive(caminho_arquivo, nome_arquivo, pasta_id=None):
-    """
-    Envia um arquivo para o Google Drive usando conta de serviço.
-    Retorna o link público do arquivo.
-    """
+    # Se o arquivo de credenciais não existir, pula o upload
+    if not os.path.exists("credenciais_drive.json"):
+        print("Google Drive não configurado — pulando upload.")
+        return None
+
+    from pydrive.auth import GoogleAuth
+    from pydrive.drive import GoogleDrive
+
     gauth = GoogleAuth()
     gauth.LoadServiceConfigFile("credenciais_drive.json")
     drive = GoogleDrive(gauth)
@@ -44,7 +51,6 @@ def enviar_para_google_drive(caminho_arquivo, nome_arquivo, pasta_id=None):
     )
     arquivo.SetContentFile(caminho_arquivo)
     arquivo.Upload()
-
     arquivo.InsertPermission({"type": "anyone", "value": "anyone", "role": "reader"})
 
     return f"https://drive.google.com/file/d/{arquivo['id']}/view"
