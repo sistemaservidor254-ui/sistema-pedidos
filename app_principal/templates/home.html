@@ -1,4 +1,3 @@
-<!-- templates/home.html -->
 {% extends "base.html" %}
 {% block title %}Início | Sistema de Pedidos{% endblock %}
 
@@ -17,8 +16,10 @@
                 <h5 class="card-title">Atalhos</h5>
                 <div class="d-flex gap-2">
                     <a class="btn btn-primary btn-sm" href="/admin/">Admin</a>
-                    <a class="btn btn-outline-primary btn-sm" href="#" hx-get="/clientes" hx-target="#painel-clientes"
-                        hx-swap="innerHTML">Clientes</a>
+                    <a class="btn btn-outline-primary btn-sm" hx-get="/clientes" hx-target="#painel-clientes"
+                        hx-swap="innerHTML">
+                        Clientes
+                    </a>
                 </div>
             </div>
         </div>
