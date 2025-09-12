@@ -20,6 +20,12 @@ from django.urls import path
 from django.http import HttpResponse
 from app_principal.views_clientes import lista_clientes, form_cliente
 from app_principal.views_home import home
+from django.shortcuts import render
+
+
+def home(request):
+    return render(request, "home.html")
+
 
 urlpatterns = [
     path("", home, name="home"),
