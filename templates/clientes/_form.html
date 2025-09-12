@@ -1,5 +1,4 @@
-<form method="post"
-    hx-post="{{ cliente.id|default:''|yesno:'/clientes/'|add:cliente.id|add:'/editar' if cliente else '/clientes/novo' }}"
+<form method="post" hx-post="{% if cliente %}/clientes/{{ cliente.id }}/editar{% else %}/clientes/novo{% endif %}"
     hx-target="#tabela-clientes" hx-swap="innerHTML">
     {% csrf_token %}
     <div class="mb-2">
