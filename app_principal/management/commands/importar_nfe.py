@@ -12,24 +12,26 @@ from pydrive2.auth import GoogleAuth
 from pydrive2.drive import GoogleDrive
 
 
+import os
+
+
 def enviar_para_google_drive(caminho_arquivo, nome_arquivo, pasta_id=None):
-    """
-    Envia um arquivo para o Google Drive usando conta de serviço.
-    Retorna o link público do arquivo.
-    """
+    if not os.path.exists("credenciais_drive.json"):
+        print("Google Drive não configurado — pulando upload.")
+        return None
+
+    from pydrive.auth import GoogleAuth
+    from pydrive.drive import GoogleDrive
+
     gauth = GoogleAuth()
-    # Carrega credenciais da conta de serviço (JSON baixado do Google Cloud)
     gauth.LoadServiceConfigFile("credenciais_drive.json")
     drive = GoogleDrive(gauth)
 
-    # Cria o arquivo no Drive
     arquivo = drive.CreateFile(
         {"title": nome_arquivo, "parents": [{"id": pasta_id}] if pasta_id else []}
     )
     arquivo.SetContentFile(caminho_arquivo)
     arquivo.Upload()
-
-    # Torna o arquivo público para leitura
     arquivo.InsertPermission({"type": "anyone", "value": "anyone", "role": "reader"})
 
     return f"https://drive.google.com/file/d/{arquivo['id']}/view"

@@ -360,3 +360,12 @@ class Auditoria(models.Model):
 
     def __str__(self):
         return f"{self.tipo_acao} - {self.data_hora:%d/%m/%Y %H:%M}"
+
+
+class Cliente(models.Model):
+    nome = models.CharField(max_length=150)
+    email = models.EmailField(blank=True)
+    criado_em = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.nome
