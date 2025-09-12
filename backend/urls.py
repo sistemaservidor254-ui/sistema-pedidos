@@ -17,9 +17,8 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse
+from django.shortcuts import render
 from app_principal.views_clientes import lista_clientes, form_cliente
-from app_principal.views_home import home
 from django.shortcuts import render
 
 
