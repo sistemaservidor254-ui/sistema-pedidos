@@ -15,27 +15,16 @@ import os
 import dj_database_url
 from decouple import config
 
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
+# Segurança
 SECRET_KEY = config("SECRET_KEY", default="dev-secret")
 DEBUG = config("DEBUG", default=False, cast=bool)
-
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="localhost,127.0.0.1").split(",")
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.onrender.com",
-]
+CSRF_TRUSTED_ORIGINS = ["https://*.onrender.com"]
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
-
-# Application definition
-
+# Aplicativos
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -44,21 +33,21 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "app_principal",
+    "storages",  # para S3
 ]
 
-INSTALLED_APPS += ["storages"]
-
-# Configuração do S3
+# Armazenamento S3
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 AWS_ACCESS_KEY_ID = "SUA_CHAVE"
 AWS_SECRET_ACCESS_KEY = "SUA_CHAVE_SECRETA"
 AWS_STORAGE_BUCKET_NAME = "nome-do-seu-bucket"
-AWS_S3_REGION_NAME = "sa-east-1"  # Região de São Paulo
+AWS_S3_REGION_NAME = "sa-east-1"
 AWS_QUERYSTRING_AUTH = False  # URLs públicas
 
+# Middleware
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # serve arquivos estáticos
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -69,10 +58,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "backend.urls"
 
+# Templates HTML
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],  # ← permite usar templates fora dos apps
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -86,58 +76,45 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "backend.wsgi.application"
 
-
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
+# Banco de dados
 DATABASES = {
     "default": dj_database_url.config(
         default=config("DATABASE_URL", default="sqlite:///db.sqlite3")
     )
 }
 
-
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
-
+# Validação de senha
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
     },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
-
-LANGUAGE_CODE = "en-us"
-
+# Internacionalização
+LANGUAGE_CODE = "pt-br"
 TIME_ZONE = "America/Sao_Paulo"
-
 USE_I18N = True
-
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-
+# Arquivos estáticos
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]  # ← se quiser usar pasta static/ para CSS/JS próprios
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
+# Campo padrão de chave primária
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# E-mail via SMTP (valores reais via Render → Environment)
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = config("EMAIL_HOST", default="")
+EMAIL_PORT = config("EMAIL_PORT", default=587, cast=int)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER", default="")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default="")
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=True, cast=bool)
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="no-reply@sistema-pedidos")
