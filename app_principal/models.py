@@ -11,6 +11,27 @@ from django.core.validators import FileExtensionValidator
 # =========================
 
 
+# app_principal/models.py
+class Cliente(models.Model):
+    """
+    Representa um cliente do sistema de pedidos.
+    - Índices em 'nome' e 'criado_em' aceleram busca e ordenação.
+    - Email único opcional (descomente se fizer sentido para seu domínio).
+    """
+
+    nome = models.CharField(max_length=255, db_index=True)  # busca mais rápida
+    email = models.EmailField(blank=True, null=True)  # unique=True opcional
+    criado_em = models.DateTimeField(
+        auto_now_add=True, db_index=True
+    )  # ordenação rápida
+
+    class Meta:
+        ordering = ["-criado_em"]  # ordenação padrão coerente com a view
+
+    def __str__(self) -> str:
+        return self.nome
+
+
 class MovimentoEstoque(models.Model):
     """
     Representa um movimento de estoque (entrada ou saída) de um item licitado.
@@ -360,12 +381,3 @@ class Auditoria(models.Model):
 
     def __str__(self):
         return f"{self.tipo_acao} - {self.data_hora:%d/%m/%Y %H:%M}"
-
-
-class Cliente(models.Model):
-    nome = models.CharField(max_length=150)
-    email = models.EmailField(blank=True)
-    criado_em = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.nome
