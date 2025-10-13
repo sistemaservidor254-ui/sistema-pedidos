@@ -1,0 +1,15 @@
+<!-- app_principal/templates/app_principal/confirm_delete.html -->
+<!doctype html>
+<html>
+
+<body>
+    <h1>Confirmar exclusão</h1>
+    <p>Deseja excluir {{ object }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmar</button>
+        <a href="{% url 'lista_clientes' %}">Cancelar</a>
+    </form>
+</body>
+
+</html>

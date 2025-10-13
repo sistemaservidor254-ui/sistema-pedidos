@@ -1,8 +1,26 @@
 from django.core.paginator import Paginator
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import get_object_or_404, render
 from django.views.decorators.http import require_http_methods
-from .models import Cliente
+from django.shortcuts import get_object_or_404, redirect, render
+from django.contrib import messages
+from .models import Cliente  # ajuste se o model tiver outro nome
+
+
+def excluir_cliente(request: HttpRequest, pk: int) -> HttpResponse:
+    """
+    Remove o cliente identificado por pk e redireciona para a lista de clientes.
+    Requer método POST para efetivar deleção; GET mostra página de confirmação simples.
+    """
+    cliente = get_object_or_404(Cliente, pk=pk)
+
+    if request.method == "POST":
+        cliente.delete()
+        messages.success(request, "Cliente excluído com sucesso.")
+        return redirect("lista_clientes")  # ajuste o nome da URL se diferente
+
+    # GET: renderizar confirmação simples (opcional: criar template app_principal/confirm_delete.html)
+
+    return render(request, "app_principal/confirm_delete.html", {"object": cliente})
 
 
 def lista_clientes(request: HttpRequest) -> HttpResponse:
