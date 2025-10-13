@@ -4,9 +4,7 @@ from . import views_clientes
 from .views_autocomplete import autocomplete_endereco
 
 urlpatterns = [
-    path(
-        "api/autocomplete-endereco", autocomplete_endereco, name="autocomplete_endereco"
-    ),
+    path("enderecos/autocomplete", autocomplete_endereco, name="autocomplete_endereco"),
     path("clientes/", views_clientes.lista_clientes, name="lista_clientes"),
     path("clientes/novo/", views_clientes.form_cliente, name="form_cliente"),
     path(
