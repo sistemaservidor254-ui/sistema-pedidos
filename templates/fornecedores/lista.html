@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Fornecedores{% endblock %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <h1 class="h4 mb-0">Fornecedores</h1>
+
+    <!-- Botão para abrir formulário de novo fornecedor -->
+    <a class="btn btn-primary btn-sm" hx-get="/fornecedores/novo{% if q %}?q={{ q }}{% endif %}" hx-target="#form-area"
+        hx-swap="innerHTML">
+        Novo fornecedor
+    </a>
+</div>
+
+<div class="row g-3">
+    <!-- Coluna da tabela -->
+    <div class="col-lg-8">
+        {% include "fornecedores/_tabela.html" %}
+    </div>
+
+    <!-- Coluna do formulário -->
+    <div class="col-lg-4">
+        <div id="form-area"></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,124 @@
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <strong class="small mb-0">
+            {% if fornecedor %}Editar fornecedor{% else %}Novo fornecedor{% endif %}
+        </strong>
+        <button type="button" class="btn-close" aria-label="Fechar"
+            onclick="document.getElementById('form-area').innerHTML=''"></button>
+    </div>
+
+    <div class="card-body">
+        <form method="post"
+            action="{% if fornecedor %}/fornecedores/{{ fornecedor.id }}/editar{% else %}/fornecedores/novo{% endif %}{% if q %}?q={{ q }}{% endif %}"
+            hx-post="{% if fornecedor %}/fornecedores/{{ fornecedor.id }}/editar{% else %}/fornecedores/novo{% endif %}{% if q %}?q={{ q }}{% endif %}"
+            hx-target="#tabela-fornecedores" hx-swap="outerHTML">
+
+            {% csrf_token %}
+
+            <!-- Razão Social -->
+            <div class="mb-3">
+                <label class="form-label">Razão Social</label>
+                <input type="text" name="razao_social"
+                    class="form-control {% if errors.razao_social %}is-invalid{% endif %}"
+                    value="{{ fornecedor.razao_social|default:'' }}" required>
+                {% if errors.razao_social %}
+                <div class="invalid-feedback">{{ errors.razao_social }}</div>
+                {% endif %}
+            </div>
+
+            <!-- CNPJ -->
+            <div class="mb-3">
+                <label class="form-label">CNPJ</label>
+                <input type="text" name="cnpj" class="form-control {% if errors.cnpj %}is-invalid{% endif %}"
+                    value="{{ fornecedor.cnpj|default:'' }}" required>
+                {% if errors.cnpj %}
+                <div class="invalid-feedback">{{ errors.cnpj }}</div>
+                {% endif %}
+            </div>
+
+            <!-- Endereço -->
+            <div class="mb-3 position-relative">
+                <label class="form-label">Endereço</label>
+                <input type="text" id="autocomplete-endereco" name="endereco" class="form-control"
+                    value="{{ fornecedor.endereco|default:'' }}" placeholder="Rua, número, bairro">
+                <ul id="suggestions" class="list-group position-absolute w-100" style="z-index:1000;"></ul>
+            </div>
+
+            <div class="row">
+                <!-- Cidade -->
+                <div class="col-md-8 mb-3">
+                    <label class="form-label">Cidade</label>
+                    <input type="text" name="cidade" class="form-control" value="{{ fornecedor.cidade|default:'' }}">
+                </div>
+
+                <!-- Estado -->
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Estado</label>
+                    <input type="text" name="estado" class="form-control" value="{{ fornecedor.estado|default:'' }}">
+                </div>
+            </div>
+
+            <!-- Telefone -->
+            <div class="mb-3">
+                <label class="form-label">Telefone</label>
+                <input type="text" name="telefone" class="form-control" value="{{ fornecedor.telefone|default:'' }}">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" value="{{ fornecedor.email|default:'' }}">
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">
+                    {% if fornecedor %}Salvar alterações{% else %}Cadastrar fornecedor{% endif %}
+                </button>
+                <button type="button" class="btn btn-outline-secondary"
+                    onclick="document.getElementById('form-area').innerHTML=''">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const input = document.getElementById('autocomplete-endereco');
+    const suggestions = document.getElementById('suggestions');
+    let debounceTimer;
+
+    input.addEventListener('input', function () {
+        const query = this.value.trim();
+        suggestions.innerHTML = '';
+        if (query.length < 3) return;
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            fetch(`/api/autocomplete-endereco?q=${encodeURIComponent(query)}`)
+                .then(res => res.json())
+                .then(data => {
+                    suggestions.innerHTML = '';
+                    if (Array.isArray(data)) {
+                        data.forEach(item => {
+                            const li = document.createElement('li');
+                            li.className = 'list-group-item list-group-item-action';
+                            li.textContent = item.display_name;
+                            li.addEventListener('click', () => {
+                                input.value = item.display_name;
+                                suggestions.innerHTML = '';
+                                if (item.address) {
+                                    document.querySelector('input[name="cidade"]').value =
+                                        item.address.city || item.address.town || item.address.village || '';
+                                    document.querySelector('input[name="estado"]').value =
+                                        item.address.state || '';
+                                }
+                            });
+                            suggestions.appendChild(li);
+                        });
+                    }
+                })
+                .catch(err => console.error(err));
+        }, 500);
+    });
+</script>

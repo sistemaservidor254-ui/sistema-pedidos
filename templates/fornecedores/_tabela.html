@@ -1,0 +1,104 @@
+<div id="tabela-fornecedores">
+    <div class="card">
+        <div class="card-body p-0">
+            <!-- Barra de busca -->
+            <div class="p-3 border-bottom">
+                <form method="get" hx-get="/fornecedores" hx-target="#tabela-fornecedores" hx-swap="outerHTML">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" name="q" placeholder="Buscar fornecedores..."
+                            value="{{ q|default:'' }}">
+                        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Tabela -->
+            <table class="table table-sm mb-0 align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Razão Social</th>
+                        <th>CNPJ</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th class="text-end text-nowrap">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if page_obj.object_list %}
+                    {% for f in page_obj.object_list %}
+                    <tr>
+                        <td>{{ f.razao_social }}</td>
+                        <td class="text-muted">{{ f.cnpj }}</td>
+                        <td class="text-muted">{{ f.cidade }}</td>
+                        <td class="text-muted">{{ f.estado }}</td>
+                        <td class="text-muted">{{ f.telefone }}</td>
+                        <td class="text-muted">{{ f.email }}</td>
+                        <td class="text-end">
+                            <!-- Editar -->
+                            <a class="btn btn-outline-secondary btn-sm"
+                                hx-get="/fornecedores/{{ f.id }}/editar{% if q %}?q={{ q }}{% endif %}"
+                                hx-target="#form-area" hx-swap="innerHTML">
+                                Editar
+                            </a>
+
+                            <!-- Excluir -->
+                            <a class="btn btn-outline-danger btn-sm"
+                                hx-delete="/fornecedores/{{ f.id }}/excluir{% if q %}?q={{ q }}{% endif %}"
+                                hx-target="#tabela-fornecedores" hx-swap="outerHTML"
+                                hx-confirm="Tem certeza que deseja excluir este fornecedor?">
+                                Excluir
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="7" class="text-center text-muted py-4">
+                            Nenhum fornecedor encontrado.
+                        </td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Paginação -->
+        <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="small text-muted">
+                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+            </div>
+            <nav>
+                <ul class="pagination pagination-sm mb-0">
+                    <!-- Primeiro -->
+                    <li class="page-item {% if not page_obj.has_previous %}disabled{% endif %}">
+                        <a class="page-link" hx-get="/fornecedores?page=1{% if q %}&q={{ q }}{% endif %}"
+                            hx-target="#tabela-fornecedores" hx-swap="outerHTML" hx-push-url="false">« Primeiro</a>
+                    </li>
+
+                    <!-- Anterior -->
+                    <li class="page-item {% if not page_obj.has_previous %}disabled{% endif %}">
+                        <a class="page-link"
+                            hx-get="/fornecedores?page={% if page_obj.has_previous %}{{ page_obj.previous_page_number }}{% else %}1{% endif %}{% if q %}&q={{ q }}{% endif %}"
+                            hx-target="#tabela-fornecedores" hx-swap="outerHTML" hx-push-url="false">‹ Anterior</a>
+                    </li>
+
+                    <!-- Próxima -->
+                    <li class="page-item {% if not page_obj.has_next %}disabled{% endif %}">
+                        <a class="page-link"
+                            hx-get="/fornecedores?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% else %}{{ page_obj.number }}{% endif %}{% if q %}&q={{ q }}{% endif %}"
+                            hx-target="#tabela-fornecedores" hx-swap="outerHTML" hx-push-url="false">Próxima ›</a>
+                    </li>
+
+                    <!-- Última -->
+                    <li class="page-item {% if not page_obj.has_next %}disabled{% endif %}">
+                        <a class="page-link"
+                            hx-get="/fornecedores?page={{ page_obj.paginator.num_pages }}{% if q %}&q={{ q }}{% endif %}"
+                            hx-target="#tabela-fornecedores" hx-swap="outerHTML" hx-push-url="false">Última »</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
